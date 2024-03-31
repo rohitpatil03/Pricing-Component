@@ -1,0 +1,222 @@
+
+/* Colors */
+/* Light theme styles */
+.light-theme {
+  /* Light theme colors */
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --light-grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --light-grayish-green: hsl(122, 100%, 95%);
+  --light-green: hsl(122, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+  --very-pale-blue: hsl(230, 100%, 99%);
+  --light-grayish-blue: hsl(224, 65%, 95%);
+  --grayish-blue: hsl(225, 20%, 60%);
+  --dark-desaturated-blue: hsl(227, 35%, 25%);
+  --font-color: hsl(0, 0%, 0%);
+  --normal-font-weight: 600;
+  --bold-font-weight: 800;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  /* Dark theme colors */
+  --soft-cyan: hsl(200, 18%, 55%);
+  --strong-cyan: hsl(200, 22%, 30%);
+  --light-grayish-red: hsl(0, 0%, 15%);
+  --light-red: hsl(0, 100%, 70%);
+  --light-grayish-green: hsl(122, 100%, 15%);
+  --light-green: hsl(122, 100%, 70%);
+  --pale-blue: hsl(200, 100%, 70%);
+  --white: hsl(0, 0%, 0%);
+  --very-pale-blue: hsl(200, 22%, 10%);
+  --light-grayish-blue: hsl(200, 20%, 18%);
+  --grayish-blue: hsl(200, 20%, 40%);
+  --dark-desaturated-blue: hsl(200, 22%, 15%);
+  --font-color: hsl(0, 0%, 100%);
+  --normal-font-weight: 600;
+  --bold-font-weight: 800;
+}
+
+
+
+
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 15px;
+}
+
+
+a {
+  color: var(--pale-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.rootContainer{
+  background-color: var(--very-pale-blue);
+  font-family: 'Manrope', sans-serif;
+  color: var(--font-color);
+  min-width: 100vw;
+  min-height: 100vh;
+
+}
+
+.pricingContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--font-color);
+  padding: 20px;
+}
+
+.pricing{
+  background-color: var(--white);
+  color:var(--pale-blue);
+  width: 600px;
+  padding: 50px;
+  box-shadow: 0px 4px 10px var(--dark-desaturated-blue);
+  color:var(--grayish-blue);
+  font-weight: var(--normal-font-weight);
+}
+
+.btn{
+  background-color: var(--font-color);
+  color:var(--grayish-blue);
+  width: 150px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.slider{
+  width: 90%;
+  height: 10px;
+  color: var(--soft-cyan);
+}
+
+.discount{
+  background-color: var(--light-grayish-red);
+  width: 40px;
+  height: 20px;
+  color: var(--light-red);
+  
+}
+
+.priceTag{
+  color: var(--font-color);
+}
+
+.heroText{
+  font-size: 30px;
+}
+
+.heroPara{
+  font-size: 15px;
+}
+
+
+
+
+
+.toggle-container {
+  width: 50px;
+  height: 22px;
+  background-color: var(--pale-blue);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-container.toggled {
+  background-color: #007bff;
+}
+
+.toggle-button {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle-container.toggled .toggle-button {
+  transform: translateX(25px);
+}
+
+
+@media only screen and (max-width: 375px) {
+  /* Styles for mobile */
+  .pricing{
+    background-color: var(--white);
+    color:var(--pale-blue);
+    width: 300px;
+    padding: 25px;
+    box-shadow: 0px 4px 10px var(--dark-desaturated-blue);
+    color:var(--grayish-blue);
+    font-weight: var(--normal-font-weight);
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .heroText{
+    font-size: 20px;
+  }
+
+  
+  
+  .heroPara{
+    font-size: 13px;
+  }
+
+  .toggle{
+    font-size: small;
+  }
+
+  .toggle-container {
+    width: 30px;
+    height: 16px;
+    background-color: var(--pale-blue);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-container.toggled {
+    background-color: #007bff;
+  }
+  
+  .toggle-button {
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-container.toggled .toggle-button {
+    transform: translateX(12px);
+  }
+}
