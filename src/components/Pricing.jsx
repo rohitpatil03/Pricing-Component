@@ -16,7 +16,7 @@ const props = {
     { id: 3, data: "Email reports" },
   ],
 };
-const Pricing = () => {
+const Pricing = (props) => {
   const [price, setPrice] = useState(props.initialPrice);
   const [isToggled, setToggled] = useState(false);
 
@@ -67,7 +67,7 @@ const Pricing = () => {
             max={
               !isToggled
                 ? props.range.max
-                : props.range.max * props.toggleSwitch.multiplier
+                : props.range.max * props.toggleSwitch.multiplier *(100 - props.toggleSwitch.right.value) *0.01
             }
             value={price}
             onChange={handleSliderChange}

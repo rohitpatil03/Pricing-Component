@@ -162,7 +162,7 @@ a:hover {
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 600px) {
   /* Styles for mobile */
   .pricing{
     background-color: var(--white);
